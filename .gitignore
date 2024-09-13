@@ -1,4 +1,39 @@
-env
+# Ignore Python virtual environment folders
+env/
+venv/
+.venv/
+
+# Ignore environment variable files
+.env
+.env.*
+
+# Ignore VS Code specific settings
+.vscode/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore other common unwanted files
+*.log
+*.sqlite3
+*.db
+*.DS_Store
+
+# Ignore compiled files (bytecode, etc.)
+*.pyc
+
+# Ignore OS generated files
+Thumbs.db
+.DS_Store
+
+# Ignore node_modules (if using Node.js)
+node_modules/
+
+# Ignore dist/build folders (for web projects)
+dist/
+build/
+
 
 
 
