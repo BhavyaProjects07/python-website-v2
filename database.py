@@ -20,4 +20,4 @@ def get_db_connection():
         port=int(os.getenv('DB_PORT')),
         user=os.getenv('DB_USER'),
         write_timeout=timeout,
-    )
+    ) 
