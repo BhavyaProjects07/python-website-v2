@@ -42,3 +42,4 @@ build/
 
 env/Lib/site-packages/distutils-precedence.pth
 env/pyvenv.cfg
+info.env
