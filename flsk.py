@@ -11,8 +11,6 @@ app.config['UPLOAD_FOLDER'] = Picfolder
 
 
 
-
-
 @app.route('/')
 def hello_world():
     jobs = load_jobs_from_db()
