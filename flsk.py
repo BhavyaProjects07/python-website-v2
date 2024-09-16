@@ -1,6 +1,7 @@
 from flask import Flask,render_template
 from flask import jsonify
-from database import get_db_connection
+
+from database import load_jobs_from_db
 import os
 app = Flask(__name__,static_folder='static')
 Picfolder = os.path.join('static','images')
@@ -9,18 +10,6 @@ app.config['UPLOAD_FOLDER'] = Picfolder
 
 
 
-def load_jobs_from_db():
-    jobs = []
-    connection = get_db_connection()  # Open a new connection
-    try:
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT * FROM jobs")
-            result = cursor.fetchall()
-            for i in result:
-                jobs.append(i)
-    finally:
-        connection.close()  # Close the connection after the query
-    return jobs
 
 
 
